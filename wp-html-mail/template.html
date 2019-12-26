@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- So that mobile will display zoomed in -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- enable media queries for windows phone 8 -->
+	<meta name="format-detection" content="telephone=no"> <!-- disable auto telephone linking in iOS -->
+	<!--[if gte mso 9]><xml>
+	 <o:OfficeDocumentSettings>
+	  <o:AllowPNG/>
+	  <o:PixelsPerInch>96</o:PixelsPerInch>
+	 </o:OfficeDocumentSettings>
+	</xml><![endif]-->
+	<style>
+		@font-face {
+		font-family: 'Google Sans';
+		font-style: italic;
+		font-weight: 400;
+		src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaErENHsxJlGDuGo1OIlL3L8phULjtH.woff2)format('woff2');
+		unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaErENHsxJlGDuGo1OIlL3L8p9ULjtH.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaErENHsxJlGDuGo1OIlL3L8pJULjtH.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaErENHsxJlGDuGo1OIlL3L8pxULg.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-m93OwBmO24p.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-m93OwdmO24p.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-m93OwpmO24p.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-m93OwRmOw.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-idxOwBmO24p.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-idxOwdmO24p.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-idxOwpmO24p.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(//fonts.gstatic.com/s/googlesans/v9/4UaZrENHsxJlGDuGo1OIlL3L-idxOwRmOw.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(//fonts.gstatic.com/s/googlesans/v9/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(//fonts.gstatic.com/s/googlesans/v9/4UaGrENHsxJlGDuGo1OIlL3Nwp5MKg.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(//fonts.gstatic.com/s/googlesans/v9/4UaGrENHsxJlGDuGo1OIlL3Awp5MKg.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(//fonts.gstatic.com/s/googlesans/v9/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLU94Yt3CwZ-Pw.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLU94YtwCwZ-Pw.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLU94Yt9CwZ-Pw.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLU94YtzCwY.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLV154t3CwZ-Pw.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLV154twCwZ-Pw.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLV154t9CwZ-Pw.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(//fonts.gstatic.com/s/googlesans/v9/4UabrENHsxJlGDuGo1OIlLV154tzCwY.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Google Sans Display Italic'), local('GoogleSansDisplay-Italic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8HacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvNpzfecZU.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Google Sans Display Italic'), local('GoogleSansDisplay-Italic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8HacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvNoDfecZU.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Google Sans Display Italic'), local('GoogleSansDisplay-Italic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8HacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvNrTfecZU.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Google Sans Display Italic'), local('GoogleSansDisplay-Italic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8HacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvNozfe.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Display Medium Italic'), local('GoogleSansDisplay-MediumItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFUBTLSrR5DQA.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Display Medium Italic'), local('GoogleSansDisplay-MediumItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFUBTLTbR5DQA.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Display Medium Italic'), local('GoogleSansDisplay-MediumItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFUBTLQLR5DQA.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 500;
+			src: local('Google Sans Display Medium Italic'), local('GoogleSansDisplay-MediumItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFUBTLTrR5.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Display Bold Italic'), local('GoogleSansDisplay-BoldItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFGBLLSrR5DQA.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Display Bold Italic'), local('GoogleSansDisplay-BoldItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFGBLLTbR5DQA.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Display Bold Italic'), local('GoogleSansDisplay-BoldItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFGBLLQLR5DQA.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Google Sans Display Bold Italic'), local('GoogleSansDisplay-BoldItalic'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8KacM9Wef3EJPWRrHjgE4B6CnlZxHVDvvFGBLLTrR5.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Display Regular'), local('GoogleSansDisplay-Regular'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8FacM9Wef3EJPWRrHjgE4B6CnlZxHVDvr9oS_a.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Display Regular'), local('GoogleSansDisplay-Regular'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8FacM9Wef3EJPWRrHjgE4B6CnlZxHVDv39oS_a.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Display Regular'), local('GoogleSansDisplay-Regular'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8FacM9Wef3EJPWRrHjgE4B6CnlZxHVDvD9oS_a.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Google Sans Display Regular'), local('GoogleSansDisplay-Regular'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8FacM9Wef3EJPWRrHjgE4B6CnlZxHVDv79oQ.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Display Medium'), local('GoogleSansDisplay-Medium'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBg3etBT7TKx9.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Display Medium'), local('GoogleSansDisplay-Medium'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBg3etBP7TKx9.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Display Medium'), local('GoogleSansDisplay-Medium'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBg3etB77TKx9.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 500;
+			src: local('Google Sans Display Medium'), local('GoogleSansDisplay-Medium'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBg3etBD7TA.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Display Bold'), local('GoogleSansDisplay-Bold'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBkXYtBT7TKx9.woff2)format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Display Bold'), local('GoogleSansDisplay-Bold'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBkXYtBP7TKx9.woff2)format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Display Bold'), local('GoogleSansDisplay-Bold'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBkXYtB77TKx9.woff2)format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		@font-face {
+			font-family: 'Google Sans Display';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Google Sans Display Bold'), local('GoogleSansDisplay-Bold'), url(//fonts.gstatic.com/s/googlesansdisplay/v8/ea8IacM9Wef3EJPWRrHjgE4B6CnlZxHVBkXYtBD7TA.woff2)format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		body {
+		  -webkit-font-smoothing: antialiased;
+		font-family: "Google Sans",Arial,sans-serif !important;
+		 text-rendering: optimizeLegibility;
+				font-weight: 400;
+		}
+		p {
+		  -webkit-font-smoothing: antialiased;
+		  font-family: "Google Sans",Arial,sans-serif !important; 
+		  text-rendering: optimizeLegibility;
+		}
+		h1{
+		font-family: "Google Sans",Arial,sans-serif !important;
+		font-weight: 300 !important
+		}
+		h2{
+		font-family: "Google Sans",Arial,sans-serif !important;
+		font-weight: 300 !important
+		}
+		h3{
+		font-family: "Google Sans",Arial,sans-serif !important;
+
+		}
+		h4{
+		font-family: "Google Sans",Arial,sans-serif !important;
+		font-weight: 300 !important
+		}
+		a {
+		  -webkit-font-smoothing: antialiased;
+		font-family: "Google Sans",Arial,sans-serif !important;
+		}
+		body{
+				background-color:###background###;
+				margin:0; 
+				padding:10px;
+		}
+
+		.header,
+		.title,
+		.subtitle,
+		.footer-text {
+				font-family: "Google Sans",Arial,sans-serif !important;
+		}
+
+		.container-padding {
+				padding-left: 24px;
+				padding-right: 24px;
+		}
+
+		.header {
+				font-size:        ###headerfontsize###px;
+				font-weight:      ###headerbold###;
+				font-style:       ###headeritalic###;
+				color:            ###headercolor###;
+				background:       ###headerbackground###;
+				font-family: "Google Sans",Arial,sans-serif !important;
+				text-align:       ###headeralign###!important;
+				padding:          ###headerpaddingtop###px ###headerpaddingright###px ###headerpaddingbottom###px ###headerpaddingleft###px;
+				line-height: 1.2;
+				text-decoration: none;
+		}
+
+		.header a {
+				font-size:        ###headerfontsize###px;
+				font-weight:      ###headerbold###;
+				font-style:       ###headeritalic###;
+				color:            ###headercolor###;
+				font-family: "Google Sans",Arial,sans-serif !important;
+				text-decoration: none;
+		}
+
+		.header-image{
+				height:auto;
+				vertical-align: top;
+				border:none;
+		}
+
+
+		.full-width-header-image{
+				width: 100%;
+				display: block;
+		}
+		
+		.footer-text,
+		.footer-text th,
+		.footer-text td,
+		.footer-text li {
+				font-size: 12px;
+				line-height: 16px;
+				color: #aaaaaa;
+				background: ###footerbackground###;
+		}
+		
+		.footer-text a,
+		.footer-text th a,
+		.footer-text td a,
+		.footer-text li a {
+				color: #aaaaaa;
+		}
+
+		.footerlink{
+				font-size: 11px;
+				text-transform: uppercase;
+				text-decoration: underline;
+		}
+
+		.container {
+				width: 600px;
+				max-width: 600px;
+		}
+
+		.content {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				background-color: ###contentbackground###;
+		}
+
+		code {
+				background-color: #eee;
+				padding: 0 4px;
+				font-family: "Google Sans",Arial,sans-serif !important;
+				font-size: 12px;
+		}
+
+		hr {
+				border: 0;
+				border-bottom: 1px solid #cccccc;
+		}
+
+		.hr {
+				height: 1px;
+				border-bottom: 1px solid #cccccc;
+		}
+
+		h1 {
+				font-size:        ###headlinefontsize###px;
+				font-weight:      ###headlinebold###;
+				font-style:       ###headlineitalic###;
+				color:            ###headlinecolor###;
+				font-family: "Google Sans",Arial,sans-serif !important;
+				text-align:       ###headlinealign###;
+		}
+
+		h2,h3,h4 {
+				font-size:        ###subheadlinefontsize###px;
+				font-weight:      ###subheadlinebold###;
+				font-style:       ###subheadlineitalic###;
+				color:            ###subheadlinecolor###;
+				font-family: "Google Sans",Arial,sans-serif !important;
+				text-align:       ###subheadlinealign###;
+		}
+
+		.subtitle {
+				font-size: 16px;
+				font-weight: 600;
+				color: #2469A0;
+		}
+		.subtitle span {
+				font-weight: 400;
+				color: #999999;
+		}
+
+		.body-text,
+		.body-text td,
+		.body-text th,
+		.body-text li {
+				font-family: "Google Sans",Arial,sans-serif !important;
+				font-size:        ###textfontsize###px;
+				color:            ###textcolor###;
+				font-weight:      ###textbold###;
+				font-style:       ###textitalic###;
+				line-height:      1.5;
+		}
+
+		.body-text,
+		.body-text td,
+		.body-text th{
+				text-align:       ###textalign###;
+		}
+
+		a{
+				color:            ###linkcolor###;
+				font-weight:      ###linkbold###;
+				font-style:       ###linkitalic###;
+				text-decoration:  ###linkunderline###;
+		}
+		
+		.body-text .content-twocol td,
+		.body-text .content-twocol h1,
+		.body-text .content-twocol h2,
+		.body-text .content-twocol h3,
+		.body-text .content-twocol h4{
+				text-align: left;
+				vertical-align: top;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		table {
+			border-spacing: 0;
+		}
+
+		table td {
+			border-collapse: collapse;
+		}
+
+		.ExternalClass {
+			width: 100%;
+		}
+
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div {
+			line-height: 100%;
+		}
+
+		.ReadMsgBody {
+			width: 100%;
+			background-color: ###background###;
+		}
+
+		table {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		a.footerlink{
+			font-size: 12px;
+			text-decoration: none;
+		}
+
+		.yshortcuts a {
+			border-bottom: none !important;
+		}
+		
+		/**** ADD CSS HERE ****/
+		
+		@media screen and (max-width: 599px) {
+			table[class="force-row"],
+			table[class="container"] {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+		}
+		@media screen and (max-width: 400px) {
+			td[class*="container-padding"] {
+				padding-left: 12px !important;
+				padding-right: 12px !important;
+			}
+
+			.header-image{
+				max-width: 100% !important;
+			}
+
+			table[class*="content-twocol"]{
+				float: none;
+			}
+
+			table[class*="content-twocol"],
+			table[class*="content-twocol"] p,
+			table[class*="content-twocol"] h1,
+			table[class*="content-twocol"] h2,
+			table[class*="content-twocol"] h3,
+			table[class*="content-twocol"] h4{
+				text-align: ###textalign###!important;
+			}
+		}
+
+		/**** ADD MOBILE CSS HERE ****/
+		
+		.ios-footer a {
+			color: #aaaaaa !important;
+			text-decoration: underline;
+		}
+		.full-width-header-image {
+		    width: 100%;
+		    display: block;
+		    margin-top: 54px !important;
+		}
+
+		
+	</style>
+</head>
+<body style="background-color: #fff !important;">
+	<span style="display:none; visibility:hidden; font-size: 1px !important;">###pre-header###</span>
+<!-- 100% background wrapper (grey background) -->
+<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" class="###plugin-class###" style="background-color: #fff !important;">
+	<tr>
+		<td align="center" valign="top" >
+
+			<br>
+			<table id="holder" class="container" border="0" cellspacing="0" cellpadding="0" style="width:100%; max-width:600px !important; background-color: #f5f5f5 !important;" align="center">
+				<tr>
+					<td align="center">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: -100px; background-color: #f5f5f5 !important;">
+							<tr>
+								<td>
+									
+									<!--[if (gte mso 9)|(IE)]>
+										<table id="outlookholder" class="container" width="600" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td>
+									<![endif]-->
+										<!--header-table-->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff !important; margin-top: 0px">
+											<tr>
+												<td class="container-padding header" align="###headeralign###">
+													###headertext###
+												</td>
+											</tr>
+										</table>
+										<br>
+										<center style="background-color: #f5f5f5 !important; margin-top: -10px;"><img src="https://tamed.global/wp-content/uploads/2019/03/cropped-favicon-tamed-1.png" width="50px" height="auto"/></center>
+										<!--/header-table-->
+										<!--content-table-->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f5f5f5 !important;">
+											<tr>
+												<td class="content" align="">
+													<div class="body-text">
+														{#mailcontent#}
+													</div>
+												</td>
+											</tr>
+										</table>
+										<!--/content-table-->
+										<!--footer-table-->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td class="container-padding footer-text" align="left">
+													###footer###
+													<br>
+												</td>
+											</tr>
+										</table>
+										<!--/footer-table-->
+									<!--[if (gte mso 9)|(IE)]>
+										</td></tr></table>
+									<![endif]-->
+					            
+					            </td>
+					        </tr>
+					    </table>	
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table><!--/100% background wrapper-->
+
+</body>
+</html>
